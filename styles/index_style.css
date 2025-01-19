@@ -1,0 +1,639 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+    --text-color: #00000;
+	--color-link: #111;
+	--tyler-background:#FEF8ED;
+    --tyler-blue-link: #98D5E6;
+    --fade-background: rgb(54 31 15);
+}
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 303em;
+    width: 100%;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+h1{
+    display: none;
+}
+
+main > section{
+    display: flex;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+    background-image: url(../images/bannerafbeelding1.jpg);
+    background-color: black;
+    transition: all .3s;
+}
+
+main > section:hover{
+    opacity: 0.9;
+    transform: scale(1.005);
+}
+
+main > section button{
+    position: relative;
+}
+
+main > section:nth-child(6):hover{
+    opacity: 1;
+    transform: scale(1);
+}
+
+main > section:nth-child(2){
+    margin-top: 3.35em;
+}
+
+main > section:last-of-type{
+    margin-bottom: 3.35em;
+}
+
+main > section:nth-child(3){
+    background-image: url(../images/bannerafbeelding2.jpg);
+}
+
+main > section:nth-child(4){
+    background-image: url(../images/bannerafbeelding3.jpg);
+}
+
+main > section:nth-child(5){
+    background-image: url(../images/bannerafbeelding4.jpg);
+}
+
+/**/
+
+main > section:nth-child(7) {
+    background-image: none;
+    background-color: var(--tyler-background);
+    height: 4em;
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    position: relative;
+}
+
+main > section:nth-child(7):hover{
+    opacity: 1;
+    transform: scale(1);
+    
+}
+
+main > section:nth-child(7) ul {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 693%;
+}
+
+main > section:nth-child(7) li {
+    display: inline-block;
+    position: relative;
+    scroll-snap-align: start;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+main > section:nth-child(7) li > a:nth-of-type(2) {
+    height: 2em;
+    box-shadow: none;
+    background-color: #98D5E6;
+    font-size: 0.7em;
+    border-radius: 2em;
+    border-style: none;
+    margin-bottom: 0em;
+    margin-top: 3em;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+main > section:nth-child(7) li > a:nth-of-type(2):hover {
+    background-color: transparent;
+    border: 0.2em solid #98D5E6;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    color: #98D5E6;
+}
+
+main > section:nth-child(7) li h3 {
+    font-size: 0.8em;
+    margin-bottom: 2em;
+    font-weight: 200;
+}
+
+main > section:nth-child(7) li p {
+    font-size: 0.85em;
+}
+
+main > section:nth-child(7) li button:nth-of-type(1) {
+    left: 0;
+    margin-left: 1em;
+    width: 2.55em;
+    height: 2.1em;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    transition: all 0.2s;
+    top: 35%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+main > section:nth-child(7) li button:nth-of-type(2) {
+    right: 0;
+    margin-right: 1em;
+    width: 2.55em;
+    height: 2.1em;
+    position: absolute;
+    background-color: transparent;
+    opacity: 0;
+    transition: all 0.2s;
+    top: 35%;
+}
+
+main > section:nth-child(7) li button:nth-of-type(3) {
+    background-color: #98D5E6;
+    font-size: 0.7em;
+    border-radius: 2em;
+    border-style: none;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    color: black;
+}
+
+main > section:nth-child(7) li button:nth-of-type(3):hover {
+    background-color: transparent;
+    border: 0.2em solid #98D5E6;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    color: #98D5E6;
+}
+
+
+
+main > section:nth-child(7) li:hover button:nth-of-type(1) {
+    opacity: 1;
+}
+
+main > section:nth-child(7) li:hover button:nth-of-type(2) {
+    opacity: 1;
+}
+
+main > section:nth-child(7) li div{
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 70%;
+    text-align: start;
+}
+
+main > section:nth-child(7) li div a {
+    flex: 0 0 100%; /*bron*/
+    display: block;
+    height: 100%;
+}
+
+
+main > section:nth-child(7) li div a img {
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    align-self: center;
+}
+
+main > section:nth-child(7) a {
+    background-color: none;
+}
+
+main > section:nth-child(7) li:nth-of-type(7) a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+main > section:nth-child(7) li:nth-of-type(7) a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/**/
+
+main > section:nth-child(6){
+    background-image: none;
+    height:4em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: block;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    position: relative;
+}
+
+main > section:nth-child(6) button{
+    position: absolute;
+    height: 3em;
+    width: 3em;
+    border-radius: 4em;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #98D5E6;
+    z-index: 50;
+    top: 50%;
+    transition: all 0.2s;
+}
+
+main > section:nth-child(6) button:hover{
+    background-color: rgba(0, 0, 0, 1);
+}
+
+main > section:nth-child(6) div {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 30em;
+    width: calc(100% - 1px);
+    margin-top: -35em;
+}
+
+main > section:nth-child(6) button:nth-of-type(2){
+    right: 0;
+    margin-right: 1em;
+}
+
+main > section:nth-child(6) button:nth-of-type(1){
+    left: 0;
+    margin-left: 1em;
+}
+
+main > section:nth-child(8){
+    background-image: url(../images/golflefleur_bg.png);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+main > section:nth-child(8) section{
+    z-index: 51;
+    align-self: center;
+    margin-left: 5%;
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    main > section:nth-child(8) section{
+        animation: section_animation 1s ease-in;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+        opacity: 0;
+    }
+  }
+
+@keyframes section_animation {
+    to {
+        opacity: 1;
+    }
+}
+
+main > section:nth-child(8):hover section{
+    animation-play-state: running;
+}
+
+main > section:nth-child(8) section a{
+    z-index: 51;
+}
+
+main > section:nth-child(8) h3{
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+main > section:nth-child(8) p{
+    color: white;
+    width: 50%;
+    margin-bottom: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > section:nth-child(8):hover{
+    opacity: 1;
+    transform: scale(1);
+}
+
+main > section:nth-child(8) img{
+    filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: absolute;
+    object-fit: cover;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    main > section:nth-child(8) img{
+        animation: background_animation 1s ease-in;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+        opacity: 0;
+    }
+  }
+
+  @keyframes background_animation {
+    to {
+        opacity: 1;
+    }
+}
+
+
+main > section:nth-child(8) img:nth-of-type(2){
+    filter: none;
+    width: 50em;
+    height: auto;
+    right: 0;
+    bottom: auto;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(10%);
+    transform: translateX(13%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    main > section:nth-child(8) img:nth-of-type(2){
+        opacity: 1;
+        animation: tyler_animation 1s ease-in-out;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+    }
+  }
+
+@keyframes tyler_animation {
+    to {
+        transform: translateY(200%);
+        opacity: 1;
+    }
+}
+
+main > section:nth-child(8):hover img:nth-of-type(2){
+    animation-play-state: running;
+}
+
+
+main > section:nth-child(8):hover img:nth-of-type(1){
+    animation-play-state: running;
+}
+
+main > section:nth-child(8) a{
+    z-index: 50;
+    height: 2em;
+    box-shadow: none;
+    background-color: #98D5E6;
+    font-size: 0.7em;
+    border-radius: 2em;
+    border-style: none;
+    margin-bottom: 3em;
+    margin-top: 1em;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+main > section:nth-child(8) a:hover{
+    background-color: transparent;
+    border: 0.2em solid #98D5E6;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    color: #98D5E6;
+}
+
+main ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100%;
+    width: 1200%;
+}
+
+main li{
+    width: 33%;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+main ul img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main > section > a{
+    background-color: var(--tyler-blue-link);
+    font-size: 0.7em;
+    border-radius: 2em;
+    border-style: none;
+    margin-bottom: 3em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    color: black;
+    text-align: center;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > section > a:hover {
+    background-color: transparent;
+    border: 0.2em solid #98D5E6;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    color: #98D5E6;
+}
+
+@media (width > 40em) {
+    main ul {
+        width: 600%; 
+    }
+
+    main > section:nth-child(7) ul {
+        width: 350%;
+    }
+
+    main > section:nth-child(8) img:nth-of-type(2){
+        filter: none;
+        width: 25em;
+        height: auto;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        opacity: 1;
+        transform: none;
+    }
+
+    main > section:nth-child(8):hover{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    main > section:nth-child(8) img{
+        filter: blur(8px);
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        position: absolute;
+        object-fit: cover;
+    }
+    
+    @media (prefers-reduced-motion: no-preference) {
+        main > section:nth-child(8) img{
+            animation: background_animation 1s ease-in;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+            opacity: 0;
+        }
+      }
+    
+      @keyframes background_animation {
+        to {
+            opacity: 1;
+        }
+    }
+    
+    
+    main > section:nth-child(8) img:nth-of-type(2){
+        filter: none;
+        width: 25em;
+        height: auto;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        opacity: 0;
+    }
+    
+    @media (prefers-reduced-motion: no-preference) {
+        main > section:nth-child(8) img:nth-of-type(2){
+            opacity: 1;
+            animation: tyler_animation 1s ease-in-out;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;
+            right: 100%;
+        }
+      }
+    
+    @keyframes tyler_animation {
+        to {
+            right: 0;
+            opacity: 1;
+        }
+    }
+    
+    main > section:nth-child(8):hover img:nth-of-type(2){
+        animation-play-state: running;
+    }
+    
+    
+    main > section:nth-child(8):hover img:nth-of-type(1){
+        animation-play-state: running;
+    }
+
+    main > section:nth-child(8) p{
+        margin: 0;
+        margin-bottom: 1.5em;
+    }
+
+    main > section:nth-child(8){
+        text-align: left;
+    }
+}
+
+@media (width > 60em) {
+    main > section:nth-child(2){
+        background-image: url(../images/golf_le_fleur_banner1.png);
+        margin-top: 4.75em;
+    }
+
+    main > section:nth-child(3) {
+        background-image: url(../images/banner5.jpg);
+    }
+
+    main > section:nth-child(4) {
+        background-image: url(../images/Banner6.jpg);
+    }
+
+    main > section:nth-child(8){
+        margin-bottom: 4.75em;
+    }
+
+    main ul {
+        width: 300%;
+    }
+
+    main {
+        height: 287em;
+    }
+
+    main > section:nth-child(7) ul {
+        width: 175%;
+    }
+}

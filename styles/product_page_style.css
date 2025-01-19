@@ -1,0 +1,362 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+    --text-color: #00000;
+	--color-link: #111;
+	--tyler-background:#FEF8ED;
+    --tyler-blue-link: #98D5E6;
+    --fade-background: rgb(54 31 15);
+}
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+
+/* jouw code */
+h1{
+    padding-top: 8em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+main {
+    height: 100%;
+    
+}
+
+main ul{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0;
+    column-gap: 1em;
+    row-gap: 1em;
+    margin-bottom: 5em;
+}
+
+main li {
+    width: auto;
+    display: flex;
+}
+
+main li section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+main li section p{
+    font-size: 0.7em;
+    margin: 0;
+    color: var(--text-color)
+}
+
+main li section h3{
+    font-size: 0.7em;
+    font-weight: normal;
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+main li section button{
+    width: 1.3em;
+    height: 1.3em;
+    border-radius: 4em;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 0.04em solid;
+    border-color: var(--text-color);
+    font-weight: bold;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    transition: all 0.1s;
+    z-index: 50;
+}
+
+main li section:hover h3{
+    text-decoration: underline;
+}
+
+main li section:focus-within h3{
+    text-decoration: underline;
+}
+
+main li section a:nth-of-type(1){
+    transition: all 0.1s;
+}
+
+main li section:hover a:nth-of-type(1){
+    opacity: 0.5;
+}
+
+main li section:focus-within a:nth-of-type(1){
+    opacity: 0.5;
+}
+
+main li section > button:hover{
+    background-color: var(--tyler-blue-link);
+    color: black;
+    border: 0;
+}
+
+main li section > button:focus{
+    background-color: var(--tyler-blue-link);
+    color: black;
+    border: 0;
+}
+
+main li section > img:nth-of-type(1) {
+    width: 2em;
+    position: absolute;
+    align-self: flex-end;
+    opacity: 1;
+    z-index: 50;
+    transition: all 0.5s;
+}
+
+main li a {
+    width: 100%;
+}
+
+main li a img {
+    width: 100%;
+}
+
+main li section ul{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 87%;
+    row-gap: 0;
+    bottom: 0;
+    background-color: var(--tyler-background);
+    z-index: 51;
+    margin-bottom: 2.4em;
+    opacity: 0;
+    overflow-y: scroll;
+}
+
+main li section ul.open2{
+    display: flex;
+    opacity: 0.86;
+}
+
+main li section ul button{
+    font-size: 0.7em;
+    width: 100%;
+    margin: 0;
+    height: 3.9em;
+    border-radius: 0%;
+    border: 0;
+    transition: all 0.05s;
+    opacity: 1;
+}
+
+main li section ul button:hover{
+    background-color: var(--tyler-blue-link)
+}
+
+main section ul{
+    margin-left: auto;
+    margin-right: auto;
+    width: 278%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 0;
+    column-gap: 1em;
+    row-gap: 1em;
+    margin-bottom: 10em;
+}
+
+main section ul li h3 {
+    font-weight: 200;
+    font-size: 0.7em;
+    margin-bottom: 0.4em;
+    color: var(--text-color);
+}
+
+main section ul li:hover h3 {
+    text-decoration: underline;
+}
+
+main section ul li:focus h3 {
+    text-decoration: underline;
+}
+
+main section ul li p {
+    font-size: 0.8em;
+    margin-top: 0.2em;
+    color: var(--text-color);
+}
+
+main section ul li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+main section ul li > a:nth-of-type(2){
+    width: 80%;
+    background-color: var(--tyler-blue-link);
+    font-size: 0.7em;
+    border-radius: 2em;
+    border-style: none;
+    margin-bottom: 3em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    color: black;
+    align-self: center;
+}
+
+main section ul li > a:nth-of-type(2):hover{
+    background-color: transparent;
+    border: 0.2em solid var(--tyler-blue-link);
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    color: #98D5E6;
+}
+
+main section ul li a:nth-of-type(1) img{
+    position: absolute;
+    transition: all 0.2s;
+}
+
+main section ul li:nth-of-type(6) > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 100%;
+}
+
+main section ul li:nth-of-type(6) > a:hover{
+    text-decoration: underline;
+}
+
+main > section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+    text-align: center;
+}
+
+main > section > h2 {
+    font-size: 0.8em;
+    display: flex;
+    text-transform: uppercase;
+    margin-top: 0;
+    position: absolute;
+    z-index: 51;
+    color: var(--text-color)
+}
+
+
+main > section ul li:hover a:nth-of-type(1) img {
+    opacity: 0;
+}
+
+main > section ul li:focus a:nth-of-type(1) img {
+    opacity: 0;
+}
+
+@media (width > 40em) {
+
+    main section ul li > a:nth-of-type(2){
+        width: 50%;
+    }
+
+}
+
+@media (width > 60em) {
+
+    main > section {
+        width: 50em;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: scroll;
+        text-align: center;
+    }
+
+    main section ul{
+        width: 197%;
+    }
+
+    main ul {
+        grid-template-columns: auto auto auto;
+        width: 50em;
+    }
+
+    main section ul li:nth-of-type(6) > a{
+        width: 13.5em;
+    }
+
+    main li section:hover > button{
+        opacity: 1;
+        transition: all 0.5s;
+        z-index: 50;
+    }
+
+    main li section:hover img:nth-of-type(1){
+        opacity: 1;
+    }
+
+    main li section:focus-within img:nth-of-type(1){
+        opacity: 1;
+    }
+
+    main li section > img:nth-of-type(1) {
+        opacity: 0;
+    }
+
+    main li section:hover > button{
+        opacity: 1;
+        transition: all 0.5s;
+        z-index: 50;
+    }
+
+    main li section:focus-within > button{
+        opacity: 1;
+        transition: all 0.5s;
+        z-index: 50;
+    }
+
+    main li section button{
+        opacity: 0;
+        transition: all 0.1s;
+    }
+}
+
+
+
